@@ -16,9 +16,6 @@ import Data.Default
 
 type Token = String
 
-token :: Token
-token = "123691697:AAEYbDP0O0oQatKN718zchPZIBeqPik3qg0"
-
 baseURL :: URL
 baseURL = fromJust $ importURL "https://api.telegram.org"
 
