@@ -12,6 +12,9 @@ cabal-version:       >=1.10
 
 library
   exposed-modules:     Network.Telegram
+  other-modules:       Network.Telegram.Base,
+                       Network.Telegram.RequestTypes,
+                       Network.Telegram.ResponseTypes
   build-depends:       base >=4.8 && <4.9,
                        aeson >=0.9 && <0.10,
                        url >=2.1 && <2.2,
