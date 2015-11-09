@@ -66,3 +66,4 @@ setWebhookURL t s = withToken t $
 
 setWebhook :: Token -> String -> IO ByteString
 setWebhook t s = simpleHttp $ exportURL $ setWebhookURL t s
+λ> 

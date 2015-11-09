@@ -1,5 +1,6 @@
-module Network.Telegram where
-
-import Network.Telegram.Base
-import Network.Telegram.RequestTypes
-import Network.Telegram.ResponseTypes
+module Network.Telegram
+    ( Network.Telegram.Base
+    , Network.Telegram.RequestTypes
+    , Network.Telegram.ResponseTypes
+    ) where
+λ> 

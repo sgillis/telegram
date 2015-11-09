@@ -3,7 +3,7 @@ INTERACTIVE    = -it --rm
 CABAL_DIR = $(realpath ./.cabal)
 GHC_DIR = $(realpath ./.ghc)
 
-all: dirs docker update install
+all: dirs docker update install sdist
 
 docker:
 	sudo docker build -t telegram .
@@ -17,6 +17,16 @@ repl:
 		-v $(GHC_DIR):/root/.ghc \
 		telegram \
 		cabal repl
+
+bash:
+	docker run \
+		$(INTERACTIVE) \
+		-v $(HOME):$(HOME) \
+		-v $(PWD):/src \
+		-v $(CABAL_DIR):/root/.cabal \
+		-v $(GHC_DIR):/root/.ghc \
+		telegram \
+		/bin/bash
 
 dirs:
 	mkdir -p .cabal
